@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+
+    <title>Alexandra Zaldana | Home</title>
+</head>
+<body>
+
+<!-- // Main Container of Webpage // -->
+<div class="home-page">
+
+    <style>
+        body {
+            background: url(assets/images/image_04_black.jpg);
+            width: 100%;
+                }
+    </style>
+
+<!-- // Jumbotron Text With Background image //    -->
+    <div class="jumbotron">
+        <h1 class="display-4">Alexandra Zaldana</h1>
+        <p class="lead">Graphic Design | Web Design | Freelance</p>
+
+        <br>
+
+        <a class="btn btn-primary btn-lg" id ="startButton" href="#" role="button">View Portfolio</a>
+    </div>
+</div>
+
+<!-- // Navbar // -->
+<div class="main-page">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+            <a class="navbar-brand d-none d-lg-inline-block ml-4" href="#"><img src="assets/images/cms.png" width="30" height="30" alt="">
+            </a>
+                    
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse flex-grow-1 text-right mr-2" id="myNavbar">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 menu-item nav-active" id="home">Home</a>
+                </li>
+
+                <li class="nav-item line">
+                    <a href="#" class="nav-link m-2 menu-item nav-active line">|</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 menu-item" id="portfolio">Portfolio</a>
+                </li>
+
+                <li class="nav-item line">
+                    <a href="#" class="nav-link m-2 menu-item nav-active line">|</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 menu-item" id="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        
+    <br>
+
+<!-- // Main text on the webpage, underneath the navbar // -->
+
+<div id="main-text">
+    <div class="row">
+        <div class="col-3">
+            <p class="left-side graphic">Graphic Design</p>
+            <p class="left-side web">Web Design</p>
+            <p class="left-side brand">Branding</p>
+            <p class="left-side layout">Layout</p>
+            <p class="left-side free">Freelance</p>
+        </div>
+
+        <!-- // About Me Section // -->
+
+        <div class="col-6 about-me">
+            <p id="about"><strong>About</strong></p>
+
+            <p id="text">
+            A Sacramento native, I graduated from California State University, Sacramento with a Bachelor’s in Graphic Design. Shortly after graduation I moved to San Diego to pursue my career in design. Mixed with a love of typography, I enjoy making ideas come to reality with my designs.
+                                                
+            My designs are innovative, always maintaining the brand consistency and style. With a design style of modern, clean and organized, I make sure every piece of my creative puzzle connects and has a greater purpose.    
+                                                
+            My website is a testament to that style. Featured are some of the projects I have done during my professional career in San Diego.
+            </p>
+        </div>
+
+        <br>
+
+        <!-- // About Me Profile Image // -->
+
+        <div class="col-3 about-me">
+            <p></p>
+            <img src="assets/images/image_01.jpg" class="rounded-circle" alt="Profile Photo" width="200" height="200">
+        </div>
+
+            <!-- // Modal to showcase portfolio images // -->
+
+            <div id="myModal" class="modal">
+                <span class="close">x</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+    <!-- // Graphic Design Portfolio Section //  -->
+
+        <div class="col-3 portfolio">
+            <p id="about"><strong>Portfolio</strong></p>
+    
+            <img id="logic-01" class="portfolio gdesign test" src="assets/images/PL-01.jpg" alt="Pretzel Logic" width="300">
+
+            <img id="dive-01" class="portfolio gdesign test" src="assets/images/DD-01.jpg" alt="Duck Dive" width="300">
+        </div>
+    
+        <div class="col-6 portfolio gdesign">
+            <img id="view-01" class="test-02" src="assets/images/VVCH-03.jpg" alt="Valley View Casino" width="600">
+
+            <img id="logic-02" src="assets/images/PL-02.jpg" alt="Pretzel Logic" width="600">
+        </div>
+
+        <!-- // Layout Design Portfolio Section // -->
+        
+        <div class="col-3">
+        
+                <img id="xy-02" class="layout-design test" src="assets/images/XY-02.jpg" alt="XY Find It" width="300">
+    
+                <img id="oc-01" class="layout-design test" src="assets/images/OC-01.jpg" alt="Operation Connect" width="300">
+            </div>
+        
+            <div class="col-6 layout-design test">
+                <img id="bdr-01" class="test-02" src="assets/images/BDR-01.jpg" alt="Bonita Del Rey Dental Care" width="600">
+    
+                <img id="gc-01" src="assets/images/GC-01.jpg" alt="Grossmont Center" width="600">
+            </div>  
+    </div>
+
+    <!-- // Graphic Design Portfolio Second Row // -->
+
+    <div class="row">
+        <div class="col-3 portfolio gdesign">
+
+        </div>
+
+        <div class="col-5 portfolio gdesign">
+            <img id="view-02" src="assets/images/VVCH-01.jpg" alt="Valley View Casino" width="500">
+        </div>
+
+        <div class="col-4 portfolio gdesign test">
+            <img id="gulls-01" src="assets/images/SDG-01.jpg" alt="San Diego Gulls" width="300">
+        </div>
+    </div>
+
+    <!-- // Graphic Design Portfolio Third Row // -->
+
+    <div class="row">
+        <div class="col-3  portfolio gdesign">
+
+        </div>
+
+        <div class="col-3 portfolio gdesign">
+            <img id="xy-01" src="assets/images/XY-01.jpg" alt="XY Find It" width="300">
+        </div>
+
+        <div class="col-6 portfolio gdesign test">
+                <img id="sdba-01" src="assets/images/SDBA-01.jpg" alt="San Diego Bar Association" width="600">
+            </div>
+    </div>
+
+</div>
+        
+
+        
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+<script src="assets/javascript/app.js"></script>
+
+</body>
+</html>
