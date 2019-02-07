@@ -1,3 +1,8 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
 .home-page {
     margin: 0 auto;
 }
@@ -15,14 +20,89 @@
     
 }
 
+#cook-01 {
+    margin-bottom: 200px !important;
+}
+
+#main-text {
+    z-index: 10;
+    margin: 0 auto;
+    width: 94%;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+#block-text {
+    position: fixed;
+    z-index: 11;
+}
+
+a:hover {
+    text-decoration: none !important;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
 .line {
     color: #f68a3f !important;
+}
+
+#break-line-01 {
+    border-bottom: 1px solid rgb(207, 207, 207);
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: -40px;
+}
+
+#break-line-02 {
+    border-bottom: 1px solid rgb(207, 207, 207);
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+#break-line-03 {
+    border-bottom: 1px solid rgb(207, 207, 207);
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+#break-line-04 {
+    border-bottom: 1px solid rgb(207, 207, 207);
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+#oc-01, #uj-01, #flynn-01 {
+    border: 1px solid rgb(207, 207, 207);
 }
 
 #about {
     letter-spacing: 2px;
     color: black !important;
     font-weight: 400 !important;
+}
+
+#header {
+    letter-spacing: 2px;
+    color: black !important;
+    font-weight: 400 !important;
+}
+
+#contact-header {
+    letter-spacing: 2px;
+    color: black !important;
+    font-weight: 400 !important;
+}
+
+.contact #emailButton{
+    text-align: center;
 }
 
 #text {
@@ -38,6 +118,40 @@ p {
     color: #777;
 }
 
+form {
+    width: 50%;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 2px;
+    margin-bottom: 100px !important;
+
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f7f7f7;
+    font-family: 'Roboto Condensed', sans-serif;
+    /* text-transform: uppercase; */
+    color: rgb(156, 156, 156) !important;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+
+}
+
+div {
+    display: block;
+}
+
 .rounded-circle {
     margin-left: 20px;
 }
@@ -50,13 +164,6 @@ p {
     background-color: transparent !important;
     color: white;
     /* border: 1px solid white; */
-}
-
-#main-text {
-    margin: 0 auto;
-    width: 94%;
-    font-family: 'Roboto Condensed', sans-serif;
-    text-transform: uppercase;
 }
 
 .display-4 {
@@ -76,9 +183,37 @@ p {
     color: white;
 }
 
-.btn {
+#startButton {
     background-color: transparent !important;
     border: 2px solid #f68a3f !important;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+#emailButton {
+    margin: 0 auto;
+    background-color: black !important;
+    color: white;
+    border: none !important;
+    border-radius: 0%;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+#submit {
+    margin: 0 auto;
+    background-color: black !important;
+    color: white;
+    border: none !important;
+    border-radius: 0%;
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     font-size: 14px !important;

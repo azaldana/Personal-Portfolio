@@ -7,6 +7,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="sticky-footer.css" rel="stylesheet">
 
     <title>Alexandra Zaldana | Home</title>
 </head>
@@ -35,10 +39,10 @@
 
 <!-- // Navbar // -->
 <div class="main-page">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
         <div class="d-flex flex-grow-1">
             <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-            <a class="navbar-brand d-none d-lg-inline-block ml-4" href="#"><img src="assets/images/cms.png" width="30" height="30" alt="">
+            <a class="navbar-brand d-none d-lg-inline-block ml-4" href="#"><img src="assets/images/personal_logo.png" width="50" alt="Logo" id="logo">
             </a>
                     
             <div class="w-100 text-right">
@@ -80,11 +84,13 @@
 <div id="main-text">
     <div class="row">
         <div class="col-3">
-            <p class="left-side graphic">Graphic Design</p>
-            <p class="left-side web">Web Design</p>
-            <p class="left-side brand">Branding</p>
-            <p class="left-side layout">Layout</p>
-            <p class="left-side free">Freelance</p>
+            <section id="block-text">
+                <a class="left-side" href="#navbar"><p>Graphic Design</p></a>
+                <a class="left-side" href="#break-line-01"><p>Web Design</p></a>
+                <a class="left-side" href="#break-line-02"><p>Branding</p></a>
+                <a class="left-side" href="#break-line-03"><p>Layout</p></a>
+                <a class="left-side" href="#break-line-04"><p>Freelance</p></a>
+            </section>
         </div>
 
         <!-- // About Me Section // -->
@@ -112,16 +118,60 @@
 
             <!-- // Modal to showcase portfolio images // -->
 
-            <div id="myModal" class="modal">
+            <div id="myModalImg" class="modal">
                 <span class="close">x</span>
                 <img class="modal-content" id="img01">
                 <div id="caption"></div>
             </div>
 
-    <!-- // Graphic Design Portfolio Section //  -->
+            <!-- // Contact Section Form // -->
+           
+            <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputFirst">First Name</label>
+                        <input type="text" class="form-control" id="firstName">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputLast">Last Name</label>
+                        <input type="text" class="form-control" id="lastName">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail">Email Address</label>
+                      <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputSubject">Subject</label>
+                        <input type="text" class="form-control" id=subject>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                          </div>
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                  </form>
+                  
+            
+
+            <!-- // Contact Me Section // -->
+    
+            <div class="col-6 contact">
+                <p id="contact-header"><strong>Contact Me</strong></p>
+    
+                <p id="text">
+                Send me a message! For freelance opportunities or other inquiries, please contact me using the form below.
+                </p>
+
+                <a class="btn btn-primary btn-lg" id ="emailButton" href="#" role="button">Send me an email</a>
+            </div>
+
+    <!-- // Graphic Design Portfolio First Row //  -->
 
         <div class="col-3 portfolio">
-            <p id="about"><strong>Portfolio</strong></p>
+            <p id="header"><strong>Portfolio</strong></p>
     
             <img id="logic-01" class="portfolio gdesign test" src="assets/images/PL-01.jpg" alt="Pretzel Logic" width="300">
 
@@ -133,21 +183,6 @@
 
             <img id="logic-02" src="assets/images/PL-02.jpg" alt="Pretzel Logic" width="600">
         </div>
-
-        <!-- // Layout Design Portfolio Section // -->
-        
-        <div class="col-3">
-        
-                <img id="xy-02" class="layout-design test" src="assets/images/XY-02.jpg" alt="XY Find It" width="300">
-    
-                <img id="oc-01" class="layout-design test" src="assets/images/OC-01.jpg" alt="Operation Connect" width="300">
-            </div>
-        
-            <div class="col-6 layout-design test">
-                <img id="bdr-01" class="test-02" src="assets/images/BDR-01.jpg" alt="Bonita Del Rey Dental Care" width="600">
-    
-                <img id="gc-01" src="assets/images/GC-01.jpg" alt="Grossmont Center" width="600">
-            </div>  
     </div>
 
     <!-- // Graphic Design Portfolio Second Row // -->
@@ -169,7 +204,7 @@
     <!-- // Graphic Design Portfolio Third Row // -->
 
     <div class="row">
-        <div class="col-3  portfolio gdesign">
+        <div class="col-3 portfolio gdesign">
 
         </div>
 
@@ -179,10 +214,113 @@
 
         <div class="col-6 portfolio gdesign test">
                 <img id="sdba-01" src="assets/images/SDBA-01.jpg" alt="San Diego Bar Association" width="600">
+        </div>
+
+    </div>
+
+    <!-- // First Break Line Row // -->
+
+    <div class="row">
+        <div class="col-3 portfolio gdesign"></div>
+
+        <div class="col-9 portfolio gdesign">
+            <div id="break-line-01"></div>
+        </div>
+    </div>
+
+    <!-- // Web Design First Row // -->
+
+    <div class="row">
+        <div class="col-3 portfolio gdesign"></div>
+    
+        <div class="col-3 portfolio gdesign">
+            <img id="imac" src="assets/images/imac.png" alt="iMac Image" width="300">
+        </div>
+    </div>
+
+     <!-- // Second Break Line Row // -->
+
+     <div class="row">
+        <div class="col-3 portfolio gdesign"></div>
+    
+        <div class="col-9 portfolio gdesign">
+            <div id="break-line-02"></div>
+        </div>
+    </div>
+
+    <!-- // Branding Design First Row // -->
+
+    <div class="row">
+            <div class="col-2 portfolio gdesign"></div>
+        
+            <div class="col-4 portfolio gdesign">
+                <img id="view-03" src="assets/images/VVCH-04.jpg" alt="Billy Joel Logo" width="500">
+            </div>
+
+            <div class="col-4 portfolio gdesign">
+                    <img id="view-04" src="assets/images/VVCH-02.jpg" alt="Big A Suite" width="400">
+                </div>
+    </div>
+
+        <!-- // Third Break Line Row // -->
+
+     <div class="row">
+            <div class="col-3 portfolio gdesign"></div>
+        
+            <div class="col-9 portfolio gdesign">
+                <div id="break-line-03"></div>
+            </div>
+    </div>
+
+     <!-- // Layout Design First Row // -->
+
+     <div class="row">
+            <div class="col-3 portfolio gdesign"></div>
+        
+            <div class="col-3 portfolio gdesign">
+                <img id="xy-02" src="assets/images/XY-02.jpg" alt="XY Find It" width="300">
+            </div>
+
+            <div class="col-3 portfolio gdesign">
+                    <img id="oc-01" src="assets/images/OC-01.jpg" alt="Operation Connect" width="300">
+            </div>
+
+            <div class="col-3 portfolio gdesign">
+                    <img id="uj-01" src="assets/images/UJ-01.jpg" alt="Unicorn Jewelry" width="300">
+            </div>
+    </div>
+
+      <!-- // Fourth Break Line Row // -->
+
+      <div class="row">
+            <div class="col-3 portfolio gdesign"></div>
+        
+            <div class="col-9 portfolio gdesign">
+                <div id="break-line-04"></div>
+            </div>
+    </div>
+
+     <!-- // Freelance Design First Row // -->
+
+     <div class="row">
+            <div class="col-3 portfolio gdesign"></div>
+        
+            <div class="col-3 portfolio gdesign">
+                <img id="flynn-01" src="assets/images/flynn-01.jpg" alt="Bridal Shower Invitation" width="300">
+            </div>
+
+            <div class="col-6 portfolio gdesign">
+                    <img id="cook-01" src="assets/images/cook-01.jpg" alt="Wedding Package" width="600">
             </div>
     </div>
 
 </div>
+
+<!-- // Footer // -->
+
+<footer class="footer">
+        <div class="container">© 2019 Copyright</div>
+      </footer>
         
 
         
