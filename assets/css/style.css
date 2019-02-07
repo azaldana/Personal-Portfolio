@@ -18,6 +18,11 @@ html {
     border-bottom: 2px solid #f68a3f;
     margin-bottom: 60px;
     
+    
+}
+
+.main-page {
+    display: none;
 }
 
 #cook-01 {

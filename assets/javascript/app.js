@@ -1,5 +1,6 @@
 $(document).ready(function(){ 
 
+
     var config = {
         apiKey: "AIzaSyDQEhx6b8Rk_K6M7FwOlg7YXf7d2zi6s5c",
         authDomain: "portfolio-b21ec.firebaseapp.com",
@@ -63,6 +64,7 @@ $(document).ready(function(){
         console.log(save.subjectLine);
         console.log(save.comment);
     })
+    
 
     function viewPortfolio(){
         var homePageButton = $("#startButton");
